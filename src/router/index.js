@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Helloworld from '../components/HelloWorld.vue'
+import Helloworld from '../components/HelloWorld.vue';
 import HtmlPage from '../views/topics/HtmlPage.vue';
 import CssPage from '../views/topics/CssPage.vue';
 import JavascriptPage from '../views/topics/JavascriptPage.vue';
@@ -24,10 +24,10 @@ const routes = [
   { path: '/examples', name: 'Examples', component: Examples },
   { path: '/glossaries', name: 'Glossaries', component: Glossaries },
   { path: '/WhyFrontend', name: 'WhyFrontend', component: WhyFrontend },
-   { path: '/about', name: 'About', component: About }
+  { path: '/about', name: 'About', component: About },
 
-  
-
+  // Catch-all route to handle 404 on refresh (required for Netlify)
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ];
 
 const router = createRouter({
